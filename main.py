@@ -1,4 +1,10 @@
+from grades import calculate_grade
 students = {}
+marks = int(input("Enter marks: "))
+
+grade = calculate_grade(marks)
+
+print("Grade:", grade)
 
 while True:
     print("\n1. Add Student")
