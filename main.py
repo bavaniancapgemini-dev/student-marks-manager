@@ -28,6 +28,9 @@ from salary import *
 from library import *
 from inventory import *
 from kpi import *
+from database_v2 import *
+from backup import *
+from export_json import *
 
 students = {}
 while True:
@@ -74,7 +77,13 @@ while True:
     print("42. Add Inventory")
     print("43. View Inventory")
     print("44. KPI Dashboard")
-    print("45. Exit")
+    print("45. Add student (Database)")
+    print("46. View Students (Database)")
+    print("47. Search Student by ID")
+    print("48. Delete Student by ID")
+    print("49. Backup Database")
+    print("50. Export JSON")
+    print("51. Exit")
 
     choice = input("Enter choice: ")
 
@@ -235,6 +244,38 @@ while True:
         kpi_dashboard()
 
     elif choice == "45":
+
+        name = input("Name: ")
+
+        marks = int(input("Marks: "))
+
+        add_student_db(name,marks)
+
+    elif choice == "46":
+
+        data = view_students_db()
+
+        for row in data:
+
+            print(row)
+
+    elif choice == "47":
+
+        search_student_db()
+
+    elif choice == "48":
+
+        delete_student_db()
+
+    elif choice == "49":
+
+        backup_database()
+
+    elif choice == "50":
+
+        export_json()
+
+    elif choice == "51":
         break
 
     else:
