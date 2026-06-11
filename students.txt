@@ -3,3 +3,8 @@ Rahul ,90
 Bavani,98
 Sri,76
 Priya,76
+Ravi,95
+Priya,88
+Arjun,30
+Sneha,78
+Kiran,22

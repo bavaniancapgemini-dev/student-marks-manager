@@ -53,3 +53,41 @@ def save_json(student_data):
     json.dump(student_data, file, indent=4)
 
     file.close()
+
+def view_students():
+
+    students = []
+
+    file = open(
+        "students.txt",
+        "r"
+    )
+
+    for line in file:
+
+        parts = line.strip().split(",")
+
+        students.append(
+            (
+                parts[0],
+                int(parts[1])
+            )
+        )
+
+    file.close()
+
+    return students
+
+def generate_student_id():
+
+    import random
+
+    return (
+        "STU"
+        + str(
+            random.randint(
+                1000,
+                9999
+            )
+        )
+    )
